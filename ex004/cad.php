@@ -17,8 +17,8 @@
         // var_dump($_POST); superglobal que contém os dados enviados pelo formulário em um array
         // var_dump($_REQUEST); junção de $_GET, $_POST e $_COOKIE
 
-        $nome = $_POST['nome'] ?? 'Visitante';
-        $sobrenome = $_POST['sobrenome'] ?? 'Desconhecido';
+        $nome = $_POST['nome'] ?: 'Visitante';
+        $sobrenome = $_POST['sobrenome'] ?: 'Desconhecido';
 
         echo "É um prazer te conhecer, $nome $sobrenome, esse é meu site!"
         ?>
